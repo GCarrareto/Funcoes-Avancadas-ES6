@@ -16,6 +16,17 @@ const doOtherThingPromisse = () =>
         }, 1000);
     });
 
+//Forma assíncrona
+
+Promise.all([doSomethingPromisse(), doOtherThingPromisse()]).then((data) => {
+    console.log(data[0].split(''));
+    console.log(data[1].split(''));
+}).catch(err => {
+    console.log(err);
+});
+
+/*
+// Forma síncrona 
 doSomethingPromisse()
     .then(data => {
         console.log(data.split(''));
@@ -23,6 +34,7 @@ doSomethingPromisse()
     })
     .then(data2 => console.log(data2.split('')))
     .catch(error => console.log("Ops...", error));
+*/
 
 //Estados de promisses:
 //Pending
