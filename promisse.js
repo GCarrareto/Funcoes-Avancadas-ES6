@@ -18,10 +18,10 @@ const doOtherThingPromisse = () =>
 
 doSomethingPromisse()
     .then(data => {
-        console.log(data);
+        console.log(data.split(''));
         return doOtherThingPromisse();
     })
-    .then(data2 => console.log(data2))
+    .then(data2 => console.log(data2.split('')))
     .catch(error => console.log("Ops...", error));
 
 //Estados de promisses:
@@ -31,7 +31,7 @@ doSomethingPromisse()
 
 
 //Callbascks
-
+/*
 function doSomething(callback) {
     setTimeout(function() {
         //did something
@@ -71,3 +71,4 @@ function doALL() {
 }
 
 doALL();
+*/
